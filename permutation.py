@@ -6,3 +6,7 @@ def solution(arr):
             return False
             
     return True
+
+
+if __name__ == "__main__":
+    print(solution([4, 1, 3, 2]))
