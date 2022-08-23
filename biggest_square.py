@@ -1,7 +1,4 @@
 def solution(board):
-    print(board)
-    print(board[0])
-
     for i in range(1, len(board)):
         for j in range(1, len(board[0])):
             if board[i][j] == 1:
