@@ -13,8 +13,6 @@ def solution(sizes):
 
     getSum = max(w) * max(h)
     return getSum
-    # answer = 0
-    # return answer
 
 
 if __name__ == "__main__":
