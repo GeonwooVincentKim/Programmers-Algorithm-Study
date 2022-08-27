@@ -7,12 +7,19 @@ def solution(array, commands):
             i = commands[outer][0]
             j = commands[outer][1]
             k = commands[outer][2]
-
-        sortedArray = sorted(array[i - 1:j])   
-        getIndex = sortedArray[k - 1]
+        
+        sortArray = array[i - 1:j]
+        sortArray.sort()
+        getIndex = sortArray[k - 1]
         result.append(getIndex)
+
+        # sortedArray = sorted(array[i - 1:j])   
+        # getIndex = sortedArray[k - 1]
+        # result.append(getIndex)
     
-    return result
+    # print(sortArray)
+    print(result)
+    # return result
 
 
 if __name__ == "__main__":
