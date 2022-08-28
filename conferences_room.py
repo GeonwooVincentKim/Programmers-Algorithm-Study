@@ -4,6 +4,7 @@ def solution(info):
     print(info)
 
     a = b = 0
+    i2 = j2 = 0
     storeCount = []
 
     # dp = [[0]*2 for _ in range(len(info))]
@@ -13,38 +14,49 @@ def solution(info):
     # for i in info:
     #     dp = [[0 for j in range(info[i])] for i in range(info)]
     #     print(dp)
+    for i, j  in info:
+        i2 = i
+        j2 = j
+    
+    dp = [[0 for j3 in range(i)] for i3 in range(j)]
+    print(dp)
+    
+    a = dp[i][0]
+    b = dp[i][1]
 
-    for i in range(len(info)):
-        for j in range(len(info[i])):
-            a = info[i][0]
-            b = info[i][1]
-            # a = dp[i][0]
-            # b = dp[i][1]
+    print(a, b)
 
-        print(a, b)
+    # for i in range(len(info)):
+    #     for j in range(len(info[i])):
+    #         a = info[i][0]
+    #         b = info[i][1]
+    #         # a = dp[i][0]
+    #         # b = dp[i][1]
 
-        for k in range(a, b + 1):
-            # print(k)
-            storeCount.append(k)
+    #     print(a, b)
+
+    #     for k in range(a, b + 1):
+    #         # print(k)
+    #         storeCount.append(k)
 
                 
-            # print(storeCount)
-            # cnt = storeCount.count(k)
-            # getCount.append(storeCount.count(k))
+    #         # print(storeCount)
+    #         # cnt = storeCount.count(k)
+    #         # getCount.append(storeCount.count(k))
 
-    checkCount = []
-    duplicateCount = []
+    # checkCount = []
+    # duplicateCount = []
 
-    for k1 in storeCount:
-        if k1 not in checkCount:
-            checkCount.append(k1)
-        else:
-            if k1 not in duplicateCount:
-                duplicateCount.append(k1)
+    # for k1 in storeCount:
+    #     if k1 not in checkCount:
+    #         checkCount.append(k1)
+    #     else:
+    #         if k1 not in duplicateCount:
+    #             duplicateCount.append(k1)
 
-        # return duplicateCount
+    #     # return duplicateCount
     
-    print(duplicateCount)
+    # print(duplicateCount)
 
     # answer = []
     # return answer
