@@ -2,6 +2,7 @@ def binary_search(target, data):
     data.sort()
     start = 0
     end = len(data) - 1
+    print(target, data)
 
     while start <= end:
         mid = (start + end) // 2
