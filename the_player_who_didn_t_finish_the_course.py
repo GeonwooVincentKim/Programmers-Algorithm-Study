@@ -1,28 +1,12 @@
-from re import L
-
-
 def solution(participant, completion):
-    # print(participant)
-    # print(completion)
-
     a = sorted(participant)
     b = sorted(completion)
 
-    result = []
-    for i in a:
-        if i not in b:
-            result.append(i)
-        elif a.count(i) != b.count(i):
-            result.append(i)
-
-    print(result)
-    return result
-        # if a.index(b) == True:
-        #     result.append(i)
-
-    # print(result)
-
-    # print(a, b)
+    for i in range(len(b)):
+        if (a[i] != b[i]):
+            return a[i]
+    
+    return a[len(a) - 1]
 
 
 if __name__ == "__main__":
