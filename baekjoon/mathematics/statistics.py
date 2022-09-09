@@ -26,8 +26,8 @@ for num in c:
 ## Sort Mode
 if len(modes) != 1:
     modes = sorted(modes)
-    print(modes[1][0])
+    print(modes[1][0])  # Print the value that is 2nd smallest number
 else:
-    print(modes[0][0])
+    print(modes[0][0])  # Print the value that is smallest number
 
 print(max(get_value) - min(get_value))
