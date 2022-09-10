@@ -1,12 +1,12 @@
 total = []
-for i in range(1, 7):
+for i in range(1, 31):
     total.append(i)
 
 value = []
-for i in range(6):
+for i in range(28):
     a = int(input())
     value.append(a)
 
 for i in total:
     if i not in value:
-        print("Print -> {0}".format(i))
+        print(i)
