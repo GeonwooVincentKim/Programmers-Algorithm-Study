@@ -1,5 +1,5 @@
 def isPalindrome(value):
-    return value == value[::-1]
+    return value == value[::-1]  # Check Palindrome or not
 
 
 while True:
