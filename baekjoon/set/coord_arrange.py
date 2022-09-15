@@ -4,7 +4,10 @@ b_list = []
 
 for i in range(a):
     b_list.append(list(map(int, input().split())))
-b_list.sort()
+
+## If it arrange while iterate in the `for loop`
+## compiler takes lot of time to calculate sorted value
+b_list.sort() 
 
 for j in b_list:
     print("{0} {1}".format(j[0], j[1]))
