@@ -3,6 +3,10 @@ x = y = 0
 max_value = -1
 
 mylist = [list(map(int, input().split())) for _ in range(n)]
+# mylist = [0 for _ in range(n)]
+# for i in range(n):
+#     mylist[i] = list(map(int, input().split()))
+
 
 for i in range(n):
     for j in range(n):
