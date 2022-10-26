@@ -1,6 +1,3 @@
-from itertools import count
-
-
 def recursion(s, l, r):
     global count
     count += 1
@@ -21,5 +18,5 @@ a = int(input())
 
 for i in range(a):
     count = 0
-    print(isPalindrome(input().rstrip()), count)
+    print(isPalindrome(input()), count)
 
