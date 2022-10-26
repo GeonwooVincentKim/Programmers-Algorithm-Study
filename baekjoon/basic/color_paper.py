@@ -1,26 +1,25 @@
 import sys
-a = int(input())
+a = int(sys.stdin.readline())
 
 color_paper_list = [list(map(int, sys.stdin.readline().split())) for _ in range(a)]
-white = blue = 0
+blue = []
+white = []
 
 def Color(x, y, n):
-    global white, blue
     check = color_paper_list[x][y]
 
     for i in range(x, x + n):
         for j in range(y, y + n):
             if check != color_paper_list[i][j]:
-                nbs = n // 2
-                Color(x, y, nbs)
-                Color(x + nbs, y, nbs)
-                Color(x, y + nbs, nbs)
-                Color(x + nbs, y + nbs, nbs)
+                Color(x, y, n // 2)
+                Color(x + n // 2, y, n // 2)
+                Color(x, y + n // 2, n // 2)
+                Color(x + n // 2, y + n // 2, n // 2)
                 return
     
     if check == 1:  
-        white += 1
-    else:   
+        blue.append(n ** 2)
+    else:  
         white.append(n ** 2)
 
     return
