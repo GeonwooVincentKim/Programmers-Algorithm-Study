@@ -1,14 +1,33 @@
-n = int(input())
+import sys
+a = int(input())
 
-color_paper_list = []
-color_paper = 100
+color_paper_list = [list(map(int, sys.stdin.readline().split())) for _ in range(a)]
+white = blue = 0
 
-for i in range(n):
-    row = list(map(int, input().split()))
-    color_paper_list.append(row)
+def Color(x, y, n):
+    global white, blue
+    check = color_paper_list[x][y]
 
-x, y = 0, 0
+    for i in range(x, x + n):
+        for j in range(y, y + n):
+            if check != color_paper_list[i][j]:
+                nbs = n // 2
+                Color(x, y, nbs)
+                Color(x + nbs, y, nbs)
+                Color(x, y + nbs, nbs)
+                Color(x + nbs, y + nbs, nbs)
+                return
+    
+    if check == 1:  
+        white += 1
+    else:   
+        white.append(n ** 2)
 
+    return
+
+Color(0, 0, a)
+print(len(white))
+print(len(blue))
 
 """
 1. Input the number of Color Paper
