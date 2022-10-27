@@ -3,13 +3,10 @@ count = 0
 
 for x in range(1, a):
     for y in range(x, a):
-        z = a - (x + y)
+        z = a - x - y
 
-        if (x + y > z) and (x + z > y) and (y + z > x) and y <= z:
-            count += 1
-
-        if (y > z):
-            break
+        if (y > z): break
+        if (x + y > z): count += 1
 
 print(count)
 
