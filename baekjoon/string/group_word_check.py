@@ -31,7 +31,4 @@ abccd -> true
        leave For-Loop area
 
 abab -> false
-
-
-
 """
