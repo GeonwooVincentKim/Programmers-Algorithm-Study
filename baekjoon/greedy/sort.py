@@ -7,11 +7,7 @@ s = int(input())
 def bubble_sort(arr, stop):
     end = len(arr) - 1
 
-    value = 0
     while end > 0:
-        if stop == 0:
-            break
-
         last_swap = 0
 
         for i in range(end):
@@ -19,13 +15,10 @@ def bubble_sort(arr, stop):
                 arr[i], arr[i + 1] = arr[i + 1], arr[i]
                 last_swap = i
             
-            if i == stop:
+            if i == (stop - 1):
                 break
-            
-        
 
         end = last_swap
-        value += 1
 
     return arr
         
