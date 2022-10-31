@@ -17,16 +17,16 @@ for i in range(a):
         queue_list.appendleft(liner[1])
     
     elif (order == 'front'):
-        if (queue_list[0] == ''):
+        if (len(queue_list) == 0):
             print(-1)
         else:
             print(queue_list[0])
     
     elif (order == 'back'):
-        if (queue_list[len(queue_list) - 1] == ''):
+        if (len(queue_list) == 0):
             print(-1)
         else:
-            print(queue_list[len(queue_list) - 1])
+            print(queue_list[-1])
     
     elif (order == 'pop_front'):
         if (len(queue_list) == 0):
