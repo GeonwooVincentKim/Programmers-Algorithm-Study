@@ -7,21 +7,24 @@ s = int(input())
 def bubble_sort(arr, stop):
     end = len(arr) - 1
 
-    while end > 0:
-        last_swap = 0
+    for i in range(end):
 
-        for i in range(end):
-            if arr[i] < arr[i + 1]:
-                arr[i], arr[i + 1] = arr[i + 1], arr[i]
-                last_swap = i
-            
-            if i == (stop - 1):
-                break
-
-        end = last_swap
-
-    return arr
+        if stop == 0:
+            break
         
+        get_max, last_swap = arr[i], i
+        for j in range(i + 1, min(len(arr), i + 1 + stop)):
+            if get_max < arr[j]:
+                get_max = arr[j]
+                last_swap = j
         
-get_value = bubble_sort(before_sort_list, s)
-print(get_value)
+        stop -= last_swap - i
+        for j in range(last_swap, i, -1):
+            arr[j] = arr[j - 1]
+        
+        arr[i] = get_max
+    
+    print(*arr)
+
+        
+bubble_sort(before_sort_list, s)
