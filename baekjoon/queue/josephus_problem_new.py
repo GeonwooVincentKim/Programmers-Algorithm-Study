@@ -19,5 +19,8 @@ print(josephus_list)
 Josephus Problem
 1. Add into deque_list
 2. Get the recurrence formula
-- 1. 
+- 1. Iterate deque_list and append into josephus_list which shows the result of josephus-permutation
+- 2. If the number is multiples of K (In this case, it's 3), Add into Josephus_list and delete from deque_list
+  = 1. Move the selected number to the
+- 3. If it space 3 place from previous number, Add into Josephus_list and delete from deque_list
 """
