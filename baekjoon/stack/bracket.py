@@ -19,7 +19,6 @@ def solution(s):
         return False
 
 
-
 a = int(input())
 
 for i in range(a):
