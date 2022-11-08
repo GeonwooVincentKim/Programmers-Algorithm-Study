@@ -4,17 +4,18 @@ from itertools import combinations
 # arr = [13, 29]
 # print(combinations(arr, 2))
 
-arr = []
-# a, b = map(int, input().split())
+# arr = []
+a, b = map(int, input().split())
 
-for i in range(1, 5):
-    arr.append(i)
+arr = [0] * b
+# for i in range(1, 5):
+#     arr.append(i)
 
 
-for i in combinations(arr, 2):
-    print(i, end=" ")
+# for i in combinations(arr, 2):
+#     print(i, end=" ")
 
-print(len(list(combinations(arr, 2))))
+print(len(list(combinations(arr, a))))
 
 # arr2 = []
 # for i in range(13, 29):
