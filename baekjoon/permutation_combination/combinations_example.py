@@ -7,14 +7,18 @@ from itertools import combinations
 arr = []
 # a, b = map(int, input().split())
 
-for i in range(13, 30):
+for i in range(1, 5):
     arr.append(i)
 
 
 for i in combinations(arr, 2):
-    print(i)
+    print(i, end=" ")
 
 print(len(list(combinations(arr, 2))))
+
+# arr2 = []
+# for i in range(13, 29):
+#     arr.append(i)
 
 # print(len(list(combinations(arr, 2))))
 
@@ -46,15 +50,16 @@ print(len(list(combinations(arr, 2))))
 
 # print(combination(arr, len(arr)))
 
-def permutation(arr, n):
-    result = []
-    if n == 0:
-        return [[]]
+# def permutation(arr, n):
+#     result = []
+#     if n == 0:
+#         return [[]]
     
-    for i in range(len(arr)):
-        elem = arr[i]
-        for rest in permutation(arr[:i] + arr[i+1:], n - 1):
-            result.append([elem] + rest)
-    return result
+#     for i in range(len(arr)):
+#         elem = arr[i]
+#         for rest in permutation(arr[:i] + arr[i+1:], n - 1):
+#             result.append([elem] + rest)
+#     return result
     
-print(permutation([0,1,2,3], 2))
+# print(permutation([0,1,2,3], 2))
+# print(len(permutation(arr2, 2)))
