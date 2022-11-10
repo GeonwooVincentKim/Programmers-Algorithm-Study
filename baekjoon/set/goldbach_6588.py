@@ -11,13 +11,6 @@ while True:
     if n == 0:
         break
 
-        # if array[i] == True:
-        #     j = 2
-
-        #     while i * j <= n:
-        #         array[i * j] = False
-        #         j += 1
-
     for i in range(3, len(array)):
         if array[i] == True:
             if array[n - i] == True:
