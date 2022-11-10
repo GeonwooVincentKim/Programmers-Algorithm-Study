@@ -1,20 +1,23 @@
 import math
+array = [True for _ in range(1000001)]
 
 while True:
     result = True
     n = int(input())
-    array = [True for _ in range(n + 1)]
 
     if n == 0:
         break
 
-    for i in range(2, int(math.sqrt(n)) + 1):
-        if array[i] == True:
-            j = 2
+    for i in range(2, 1001):
+        if array[i]:
+            for k in range(i + i, 1000001, i):
+                array[k] = False
+        # if array[i] == True:
+        #     j = 2
 
-            while i * j <= n:
-                array[i * j] = False
-                j += 1
+        #     while i * j <= n:
+        #         array[i * j] = False
+        #         j += 1
 
     for i in range(2, n + 1):
         if array[i]:
