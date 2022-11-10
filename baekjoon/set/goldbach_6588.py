@@ -1,17 +1,16 @@
-import math
 array = [True for _ in range(1000001)]
 
+for i in range(2, 1001):
+    if array[i]:
+        for k in range(i + i, 1000001, i):
+            array[k] = False
+
 while True:
-    result = True
     n = int(input())
 
     if n == 0:
         break
 
-    for i in range(2, 1001):
-        if array[i]:
-            for k in range(i + i, 1000001, i):
-                array[k] = False
         # if array[i] == True:
         #     j = 2
 
@@ -19,11 +18,11 @@ while True:
         #         array[i * j] = False
         #         j += 1
 
-    for i in range(2, n + 1):
-        if array[i]:
-            print(i, end=' ')
-    print()
-
+    for i in range(3, len(array)):
+        if array[i] == True:
+            if array[n - i] == True:
+                print("%d = %d + %d" % (n, i, n - i))
+                break
 """
 1. Get the user input-value
 2. Iterate from 1 to user input-value
