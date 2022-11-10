@@ -1,13 +1,8 @@
 a = int(input())
-result = 1
-
-for item in range(1, a + 1, 1):
-    result *= item
-
-get_string = list(str(result))
 
 count = 0
-for i in get_string:
-    print(i)
+while a > 0:
+    count += a // 5
+    a //= 5
 
-print(get_string.count('0'))
+print(count)
