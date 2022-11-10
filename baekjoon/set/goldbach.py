@@ -1,3 +1,8 @@
+"""
+Number 1    
+"""
+
+
 def isPrime(n):
     if n == 1:
         return False
@@ -18,12 +23,36 @@ for _ in range(int(input())):
         else:
             a -= 1
             b += 1
-# a = int(input())
 
-# for i in range(2, a):
-#     if (a % i == 0):
-#         print()
-    
 
-# print(a)
+"""
+Number 2
+"""
 
+array = [True for _ in range(10001)]
+
+for i in range(2, 10001):
+    if array[i]:
+        for k in range(i + i, 10001, i):
+            array[k] = False
+
+
+t = int(input())
+
+count = 0
+while t:
+    num = int(input())
+
+    # Iterate to opposite way (num -> 0)
+    for i in range(num // 2, 0, -1):
+        if array[i] == True:
+            if array[num - i] == True:
+                print(i, num - i)
+                break
+
+    # If Count number and Test Case number are same
+    # Escape from the While Loop
+    if count == (t - 1):
+        break
+    else:
+        count += 1
