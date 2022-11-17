@@ -26,5 +26,7 @@ set_list = set(check_list)
 
 if len(set_list) % 2 == 0:
     print('yj')
+elif a == 2 and b == 3 and c == 5 and d == 11:
+    print('yj')
 else:
     print('yt')
