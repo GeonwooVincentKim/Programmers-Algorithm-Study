@@ -12,7 +12,8 @@ def merge_sort(array, left, right):
 def merge(array, left, mid, right):
     global result, count
 
-    i, j = left, mid + 1
+    i = left
+    j = mid + 1
     temp = []
 
     while (i <= mid and j <= right):
@@ -31,7 +32,8 @@ def merge(array, left, mid, right):
         temp.append(array[j])
         j += 1    
 
-    i, t = left, 0
+    i = left
+    t = 0
 
     while i <= right:
         array[i] = temp[t]
