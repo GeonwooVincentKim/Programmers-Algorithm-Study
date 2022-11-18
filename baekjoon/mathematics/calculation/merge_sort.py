@@ -44,6 +44,7 @@ def merge(array, left, mid, right):
         i += 1
         t += 1
     
+
 if __name__ == "__main__":
     n, k = map(int, input().split())
     array_list = list(map(int, sys.stdin.readline().split()))
