@@ -17,4 +17,3 @@ for i in range(1, n+1):
             d[i][j] = max(d[i-1][j], d[i-1][j-w]+v)
 
 print(d[n][k])
-
