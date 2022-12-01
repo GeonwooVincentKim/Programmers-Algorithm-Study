@@ -1,17 +1,29 @@
-n = int(input())
+import sys
+from math import gcd
 
-value_list = []
-number_difference = 0
-value_rest_number = 0
+n = int(sys.stdin.readline())
+ls = []
+result = []
 
-for i in range(n):
-    m = int(input())
+for _ in range(n):
+    ls.append(int(sys.stdin.readline()))
+ls.sort()
 
-    if m % n == 0:
-        continue
-    # if m % i == 0:
-    #     continue
-    else:
-        value_rest_number = m % n
+temp = [ls[i] - ls[i - 1] for i in range(1, n)]
+my_gcd = temp[0]
 
-    value_list.append(m)
+for i in range(1, n - 1):
+    my_gcd = gcd(my_gcd, temp[i])
+
+for i in range(1, int(pow(my_gcd, 1 / 2)) + 1):
+
+    if my_gcd % i == 0:
+        if i ** 2 == my_gcd:
+            result.append(i)
+        else:
+            result += [i, my_gcd // i]
+result.remove(1)
+result.sort()
+
+for i in range(len(result)):
+    print(result[i], end=" ")
