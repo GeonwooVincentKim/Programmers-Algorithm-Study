@@ -13,7 +13,7 @@ for i in range(len(S)):
     if ''.join(stack[-ex_len:]) == explosion_string:
         for _ in range(ex_len):
             stack.pop()
-
+ 
 # 결과 출력
 if stack:
     print(''.join(stack))
