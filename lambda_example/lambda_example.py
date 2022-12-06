@@ -4,9 +4,11 @@ def general_way(index):
 
 def solution(numbers):
     get_list = list(map(str, numbers))
-    get_list.sort(key=general_way, reverse=True)
-    # get_list.sort(key=lambda x: x * 3, reverse=True)
-    return str(int(''.join(get_list)))
+    
+    for i in get_list:
+        print(int(i))
+    # get_list.sort(key=general_way, reverse=True)
+    # return str(int(''.join(get_list)))
 
 
 if __name__ == "__main__":
