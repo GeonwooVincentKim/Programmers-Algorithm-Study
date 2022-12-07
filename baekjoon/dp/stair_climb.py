@@ -1,16 +1,15 @@
-import sys
-dp = []
-array = []
-
 n = int(input())
-for i in range(n):
-    array.append(int(sys.stdin.readline()))
+array = [0 for i in range(301)]
+dp = [0 for i in range(301)]
 
-dp.append(array[0])
-dp.append(max(array[0] + array[1], array[1]))
-dp.append(max(array[0] + array[2], array[1] + array[2]))
+for i in range(n):
+    array[i] = int(input())
+
+dp[0] = array[0]
+dp[1] = array[0] + array[1]
+dp[2] = max(array[1] + array[2], array[0] + array[2])
 
 for i in range(3, n):
-    dp.append(max(dp[i-2] + array[i] , dp[i-3] + array[i] + array[i - 1]))
+    dp[i] = max(dp[i - 3] + array[i - 1] + array[i], dp[i - 2] + array[i])
 
-print(dp.pop())
+print(dp[n - 1])
