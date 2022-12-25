@@ -24,4 +24,5 @@ small1 = abs(total[maxhidx-1] - total[(maxhidx-5 if maxhidx == 5 else maxhidx +1
 
 small2 = abs(total[maxwidx-1] - total[(maxwidx-5 if maxwidx == 5 else maxwidx +1)])
 area = bigbox - (small1 * small2)
+
 print(area*K)
